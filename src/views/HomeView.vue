@@ -4,7 +4,7 @@
       <div class="col-12 text-center mb-5">
         <h1 class="mb-4">VueX Counter</h1>
         <p>Click the buttons to increment and decrement the counter.</p>
-        <h2 class="ms_counter mb-4">
+        <h2 class="ms_counter mb-4" :style="{color: $store.state.color}">
           {{ $store.state.counter }}
         </h2>
         <button class="btn btn-danger me-4" @click="$store.dispatch('decrementCounter')">-</button>
