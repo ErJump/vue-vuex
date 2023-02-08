@@ -17,6 +17,9 @@ export default createStore({
     },
     incrementCounter(state, randomNumber) {
       state.counter += randomNumber
+    },
+    setColor(state, color) {
+      state.color = color
     }
   },
   actions: {
