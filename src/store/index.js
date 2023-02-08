@@ -6,7 +6,9 @@ export default createStore({
     counter: 0
   },
   getters: {
-
+    counterSquared(state) {
+      return state.counter * state.counter
+    }
   },
   mutations: {
     decrementCounter(state, randomNumber) {
@@ -29,7 +31,6 @@ export default createStore({
           commit('decrementCounter', response.data)
       })
     }
-
   },
   modules: {
   }
