@@ -7,8 +7,8 @@
         <h2 class="ms_counter mb-4">
           {{ $store.state.counter }}
         </h2>
-        <button class="btn btn-danger me-4" @click="decrement()">-</button>
-        <button class="btn btn-primary" @click="increment()">+</button>
+        <button class="btn btn-danger me-4" @click="$store.commit('decrementCounter')">-</button>
+        <button class="btn btn-primary" @click="$store.commit('incrementCounter')">+</button>
       </div>
     </div>
   </div>
@@ -19,13 +19,5 @@
 export default {
   name: 'HomeView',
 
-  methods: {
-    increment() {
-      this.counter++;
-    },
-    decrement() {
-      this.counter--;
-    }
-  }
 }
 </script>
